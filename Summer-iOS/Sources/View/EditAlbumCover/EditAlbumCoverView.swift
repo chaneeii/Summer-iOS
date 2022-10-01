@@ -79,8 +79,8 @@ struct EditAlbumCoverView: View {
             
             CustomImageButton(isDisabled: image == nil,
                               imageName: image == nil ? "check-gray" : "check-color",
-                              width: 100,
-                              height: 100){
+                              width: 90,
+                              height: 90){
                 
                 UserDefaultsManager.setUserDefaults(albumName, forKey: .albumName)
                 UserDefaultsManager.setUserDefaultsWithIamge(UIImage: uiImage, forKey: .albumCoverImage )
