@@ -86,11 +86,11 @@ struct AlbumCollectionView: View {
             
             // Button
             ZStack{
-                NavigationLink(destination: AlbumCollectionView(), tag: 1, selection: self.$tag ) {
+                NavigationLink(destination: AddPhotoView(), tag: 1, selection: self.$tag ) {
                     EmptyView()
                 }
                 CustomImageButton(isDisabled: false,
-                                  imageName: "heart-empty",
+                                  imageName: "heart-fill",
                                   width: 90,
                                   height: 90){
                     self.tag = 1
@@ -102,6 +102,7 @@ struct AlbumCollectionView: View {
         .navigationBarBackButtonHidden(true)
 
     }
+    
 }
 
 struct AlbumCollectionView_Previews: PreviewProvider {

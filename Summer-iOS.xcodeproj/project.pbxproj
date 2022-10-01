@@ -19,6 +19,7 @@
 		A759DBBF28E85E8F0021B13A /* ColorExtension+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBB628E85E8F0021B13A /* ColorExtension+.swift */; };
 		A759DBC028E85E8F0021B13A /* KeybaordHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBB728E85E8F0021B13A /* KeybaordHelper.swift */; };
 		A759DBC528E868110021B13A /* AlbumCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBC428E868110021B13A /* AlbumCollectionView.swift */; };
+		A759DBC828E88CDC0021B13A /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBC728E88CDC0021B13A /* AddPhotoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		A759DBB628E85E8F0021B13A /* ColorExtension+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ColorExtension+.swift"; sourceTree = "<group>"; };
 		A759DBB728E85E8F0021B13A /* KeybaordHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeybaordHelper.swift; sourceTree = "<group>"; };
 		A759DBC428E868110021B13A /* AlbumCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionView.swift; sourceTree = "<group>"; };
+		A759DBC728E88CDC0021B13A /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		A759DBAA28E85E8F0021B13A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A759DBC628E88CD00021B13A /* AddPhotoView */,
 				A759DBC328E868010021B13A /* AlbumCollectionView */,
 				A759DBC228E867F80021B13A /* AlbumCoverView */,
 				A759DBAB28E85E8F0021B13A /* InitialAlbumSetup */,
@@ -149,6 +152,7 @@
 		A759DBB428E85E8F0021B13A /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				A759DBC928E892D70021B13A /* Utils */,
 				A759DBB528E85E8F0021B13A /* Extension */,
 			);
 			path = Helper;
@@ -158,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				A759DBB628E85E8F0021B13A /* ColorExtension+.swift */,
-				A759DBB728E85E8F0021B13A /* KeybaordHelper.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -185,6 +188,22 @@
 				A759DBC428E868110021B13A /* AlbumCollectionView.swift */,
 			);
 			path = AlbumCollectionView;
+			sourceTree = "<group>";
+		};
+		A759DBC628E88CD00021B13A /* AddPhotoView */ = {
+			isa = PBXGroup;
+			children = (
+				A759DBC728E88CDC0021B13A /* AddPhotoView.swift */,
+			);
+			path = AddPhotoView;
+			sourceTree = "<group>";
+		};
+		A759DBC928E892D70021B13A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A759DBB728E85E8F0021B13A /* KeybaordHelper.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +284,7 @@
 				A759DBBD28E85E8F0021B13A /* ImagePicker.swift in Sources */,
 				A759DBBF28E85E8F0021B13A /* ColorExtension+.swift in Sources */,
 				A759DBBC28E85E8F0021B13A /* CustomImageButton.swift in Sources */,
+				A759DBC828E88CDC0021B13A /* AddPhotoView.swift in Sources */,
 				A759DBC528E868110021B13A /* AlbumCollectionView.swift in Sources */,
 				A71FA7AB28E85D8800DE27A3 /* Summer_iOSApp.swift in Sources */,
 			);
