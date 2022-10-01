@@ -59,8 +59,8 @@ struct EditAlbumNameView: View {
                 }
                 CustomImageButton(isDisabled: albumName.isEmpty,
                                   imageName: albumName.isEmpty ? "check-gray" : "check-color",
-                                  width: 100,
-                                  height: 100){
+                                  width: 90,
+                                  height: 90){
                     hideKeyboard()
                     if(!albumName.isEmpty) {
                         self.tag = 1
@@ -70,7 +70,6 @@ struct EditAlbumNameView: View {
         }
         .background(Color.babyPink)
         .onAppear(perform : UIApplication.shared.hideKeyboard)
-        
         
         
     }

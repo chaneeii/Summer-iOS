@@ -15,9 +15,10 @@
 		A759DBBB28E85E8F0021B13A /* EditAlbumCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBAF28E85E8F0021B13A /* EditAlbumCoverView.swift */; };
 		A759DBBC28E85E8F0021B13A /* CustomImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBB128E85E8F0021B13A /* CustomImageButton.swift */; };
 		A759DBBD28E85E8F0021B13A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBB228E85E8F0021B13A /* ImagePicker.swift */; };
-		A759DBBE28E85E8F0021B13A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBB328E85E8F0021B13A /* ContentView.swift */; };
+		A759DBBE28E85E8F0021B13A /* AlbumCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBB328E85E8F0021B13A /* AlbumCoverView.swift */; };
 		A759DBBF28E85E8F0021B13A /* ColorExtension+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBB628E85E8F0021B13A /* ColorExtension+.swift */; };
 		A759DBC028E85E8F0021B13A /* KeybaordHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBB728E85E8F0021B13A /* KeybaordHelper.swift */; };
+		A759DBC528E868110021B13A /* AlbumCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBC428E868110021B13A /* AlbumCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,9 +31,10 @@
 		A759DBAF28E85E8F0021B13A /* EditAlbumCoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAlbumCoverView.swift; sourceTree = "<group>"; };
 		A759DBB128E85E8F0021B13A /* CustomImageButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageButton.swift; sourceTree = "<group>"; };
 		A759DBB228E85E8F0021B13A /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		A759DBB328E85E8F0021B13A /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A759DBB328E85E8F0021B13A /* AlbumCoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCoverView.swift; sourceTree = "<group>"; };
 		A759DBB628E85E8F0021B13A /* ColorExtension+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ColorExtension+.swift"; sourceTree = "<group>"; };
 		A759DBB728E85E8F0021B13A /* KeybaordHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeybaordHelper.swift; sourceTree = "<group>"; };
+		A759DBC428E868110021B13A /* AlbumCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,11 +104,12 @@
 		A759DBAA28E85E8F0021B13A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A759DBC328E868010021B13A /* AlbumCollectionView */,
+				A759DBC228E867F80021B13A /* AlbumCoverView */,
 				A759DBAB28E85E8F0021B13A /* InitialAlbumSetup */,
 				A759DBAC28E85E8F0021B13A /* EditAlbumName */,
 				A759DBAE28E85E8F0021B13A /* EditAlbumCover */,
 				A759DBB028E85E8F0021B13A /* Common */,
-				A759DBB328E85E8F0021B13A /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -166,6 +169,22 @@
 				A71FA7AE28E85D8900DE27A3 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A759DBC228E867F80021B13A /* AlbumCoverView */ = {
+			isa = PBXGroup;
+			children = (
+				A759DBB328E85E8F0021B13A /* AlbumCoverView.swift */,
+			);
+			path = AlbumCoverView;
+			sourceTree = "<group>";
+		};
+		A759DBC328E868010021B13A /* AlbumCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				A759DBC428E868110021B13A /* AlbumCollectionView.swift */,
+			);
+			path = AlbumCollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,10 +261,11 @@
 				A759DBBA28E85E8F0021B13A /* EditAlbumNameView.swift in Sources */,
 				A759DBC028E85E8F0021B13A /* KeybaordHelper.swift in Sources */,
 				A759DBB928E85E8F0021B13A /* UserDefaultsManager.swift in Sources */,
-				A759DBBE28E85E8F0021B13A /* ContentView.swift in Sources */,
+				A759DBBE28E85E8F0021B13A /* AlbumCoverView.swift in Sources */,
 				A759DBBD28E85E8F0021B13A /* ImagePicker.swift in Sources */,
 				A759DBBF28E85E8F0021B13A /* ColorExtension+.swift in Sources */,
 				A759DBBC28E85E8F0021B13A /* CustomImageButton.swift in Sources */,
+				A759DBC528E868110021B13A /* AlbumCollectionView.swift in Sources */,
 				A71FA7AB28E85D8800DE27A3 /* Summer_iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,6 +398,7 @@
 				DEVELOPMENT_TEAM = 562Z37RH3N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "썸머:네컷앨범";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -411,6 +432,7 @@
 				DEVELOPMENT_TEAM = 562Z37RH3N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "썸머:네컷앨범";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

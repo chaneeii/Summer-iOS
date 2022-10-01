@@ -38,7 +38,7 @@ extension Color {
      */
     
     static let pointPink = Color(hex: "#FF6C6C") // 찐핑
-    static let peachPink = Color(hex: "#FFF2F2") // 중핑
+    static let peachPink = Color(hex: "#FFA7A7") // 중핑
     static let babyPink = Color(hex: "#FFF2F2") // 연핑
     static let white50 = Color(hex: "#FFFFFF").opacity(0.5) // 투명화이트
     static let gray41 = Color(hex: "#414141")
