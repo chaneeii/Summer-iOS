@@ -72,7 +72,6 @@ struct EditAlbumNameView: View {
         .onAppear(perform : UIApplication.shared.hideKeyboard)
         
         
-        
     }
 }
 

@@ -49,6 +49,9 @@ struct AlbumCoverView: View {
                 .padding(.top, 90)
                 Spacer()
             }
+            .frame(maxWidth: .infinity)
+            .background(Color.peachPink)
+            
             // Button
             ZStack{
                 NavigationLink(destination: AlbumCollectionView(), tag: 1, selection: self.$tag ) {
@@ -62,8 +65,6 @@ struct AlbumCoverView: View {
                 }
             }
         }
-        .frame(width: UIScreen.main.bounds.size.width)
-        .background(Color.peachPink)
         .onAppear{
             getCoverImage()
         }
