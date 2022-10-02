@@ -82,14 +82,23 @@ struct EditAlbumCoverView: View {
                               width: 90,
                               height: 90){
                 
-                UserDefaultsManager.setUserDefaults(albumName, forKey: .albumName)
-                UserDefaultsManager.setUserDefaultsWithIamge(UIImage: uiImage, forKey: .albumCoverImage )
-                isFirstLaunching.toggle()
-                
+                if isFirstLaunching {
+                    UserDefaultsManager.setUserDefaults(albumName, forKey: .albumName)
+                    UserDefaultsManager.setUserDefaultsWithIamge(UIImage: uiImage, forKey: .albumCoverImage)
+                    isFirstLaunching.toggle()
+                } else {
+                    UserDefaultsManager.setUserDefaultsWithIamge(UIImage: uiImage, forKey: .albumCoverImage)
+                    self.presentationMode.wrappedValue.dismiss()
+                }
             }
         }
-        .background(Color.babyPink)
         .navigationBarBackButtonHidden(true)
+        .background(Color.babyPink)
+        .onAppear{
+            if !isFirstLaunching {
+                getCoverImage()
+            }
+        }
         .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
             ImagePicker(image: self.$uiImage, sourceType: self.imageSourceType)
         }
@@ -97,6 +106,13 @@ struct EditAlbumCoverView: View {
             Alert(title: Text(errorAlertMessage))
         })
         
+    }
+    
+    func getCoverImage() {
+        if let imageData = UserDefaultsManager.getUserDefaultsObject(forKey: .albumCoverImage),
+           let uiImage = UIImage(data: imageData as! Data) {
+            self.image = Image(uiImage: uiImage)
+        }
     }
     
     func loadImage() {

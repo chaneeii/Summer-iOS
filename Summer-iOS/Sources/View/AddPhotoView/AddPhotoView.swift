@@ -90,18 +90,13 @@ struct AddPhotoView: View {
             }
             
             // Button
-            ZStack{
-                NavigationLink(destination: AlbumCollectionView(), tag: 1, selection: self.$tag ) {
-                    EmptyView()
-                }
-                CustomImageButton(isDisabled: image == nil,
-                                  imageName: image == nil ? "check-gray" : "check-color",
-                                  width: 90,
-                                  height: 90){
-                    
-                    self.addFourto()
-                    self.tag = 1
-                }
+            CustomImageButton(isDisabled: image == nil,
+                              imageName: image == nil ? "check-gray" : "check-color",
+                              width: 90,
+                              height: 90){
+                
+                self.addFourto()
+                self.presentationMode.wrappedValue.dismiss()
             }
             
         }
