@@ -54,7 +54,9 @@ struct AlbumCoverView: View {
             
             // Button
             ZStack{
-                NavigationLink(destination: AlbumCollectionView(), tag: 1, selection: self.$tag ) {
+                NavigationLink(destination: AlbumCollectionView(),
+                               tag: 1,
+                               selection: self.$tag ) {
                     EmptyView()
                 }
                 CustomImageButton(isDisabled: false,
@@ -90,8 +92,8 @@ struct AlbumCoverView: View {
 
 
 
-struct AlbumCoverView_Previews: PreviewProvider {
-    static var previews: some View {
-        AlbumCoverView()
-    }
-}
+//struct AlbumCoverView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AlbumCoverView()
+//    }
+//}

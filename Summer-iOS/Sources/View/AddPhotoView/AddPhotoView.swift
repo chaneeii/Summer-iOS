@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct AddPhotoView: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @ObservedResults(Fourto.self) var fourtoList
     @State var tag: Int? = nil
     @State var date: Date = Date()
-    
     
     @State private var showingImagePicker = false
     @State private var uiImage: UIImage?
@@ -21,7 +22,6 @@ struct AddPhotoView: View {
     
     @State private var showingErrorAlert = false
     @State private var errorAlertMessage = ""
-    
     
     var body: some View {
         
@@ -91,13 +91,15 @@ struct AddPhotoView: View {
             
             // Button
             ZStack{
-                NavigationLink(destination: AddPhotoView(), tag: 1, selection: self.$tag ) {
+                NavigationLink(destination: AlbumCollectionView(), tag: 1, selection: self.$tag ) {
                     EmptyView()
                 }
-                CustomImageButton(isDisabled: false,
-                                  imageName: "check-color",
+                CustomImageButton(isDisabled: image == nil,
+                                  imageName: image == nil ? "check-gray" : "check-color",
                                   width: 90,
                                   height: 90){
+                    
+                    self.addFourto()
                     self.tag = 1
                 }
             }
@@ -114,6 +116,20 @@ struct AddPhotoView: View {
         
     }
     
+    func addFourto() {
+        var fourto = Fourto(takenDate: Date(), imagePath: "")
+        if let uiImage = uiImage {
+            if let jpegData = uiImage.jpegData(compressionQuality: 0.8) {
+                fourto.setImage(image: jpegData)
+            }
+        }
+//        self.fourtos.add(photo: fourto)
+//        try! localRealm.write {
+//            localRealm.add(fourto)
+//        }
+        $fourtoList.append(fourto)
+        
+    }
     
     func loadImage() {
         guard let uiImage = self.uiImage else { return }
@@ -126,7 +142,7 @@ struct AddPhotoView: View {
             self.showingImagePicker = true
         }
         else {
-            self.errorAlertMessage = "Camera is not available"
+            self.errorAlertMessage = "카메라를 사용할 수 없습니다."
             self.showingErrorAlert = true
         }
     }
@@ -139,8 +155,8 @@ struct AddPhotoView: View {
     
 }
 
-struct AddPhotoView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddPhotoView()
-    }
-}
+//struct AddPhotoView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AddPhotoView(Fourtos())
+//    }
+//}
