@@ -6,14 +6,15 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct AlbumCollectionView: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @ObservedResults(Fourto.self) var fourtoList
     @State var tag: Int? = nil
     
     private var flexibleLayout = [GridItem(.flexible()), GridItem(.flexible())]
-    
     
     var body: some View {
         
@@ -51,7 +52,11 @@ struct AlbumCollectionView: View {
                         .padding(.top, 30)
                     
                     VStack {
-                       Text("하트 버튼을 눌러\n추억들을 쌓아가세요")
+                        if fourtoList.isEmpty {
+                            Text("하트 버튼을 눌러\n추억들을 쌓아가세요")
+                        } else {
+                            Text("📸\(fourtoList.count) photos")
+                        }
                     }
                     .foregroundColor(Color.gray41)
                     .frame(maxWidth: .infinity, maxHeight: 95)
@@ -62,11 +67,10 @@ struct AlbumCollectionView: View {
                     
                     ScrollView(showsIndicators: false){
                         LazyVGrid(columns: flexibleLayout, spacing: 20) {
-                             ForEach((1...9), id: \.self) { _ in
+                            ForEach(fourtoList, id: \.id) { fourto in
                                  HStack{
-                                     Image("sample")
+                                     getImage(for: fourto)
                                          .resizable()
-                                         .renderingMode(.original)
                                          .frame(width: 149.83, height: 227.16)
                                          .scaledToFill()
                                  }
@@ -77,7 +81,7 @@ struct AlbumCollectionView: View {
                         }
                     }
                     .padding(.top, 10)
-                    
+                     
                     Spacer()
                     
                 }
@@ -103,10 +107,47 @@ struct AlbumCollectionView: View {
 
     }
     
+    func getImage(for fourto: Fourto) -> Image {
+        if let imageData = fourto.getImage() {
+            if let uiImage = UIImage(data: imageData) {
+                return Image(uiImage: uiImage)
+            }
+        }
+
+        return Image(systemName: "person.crop.square")
+    }
+    
+//    private func loadSavedData() {
+//        DispatchQueue.global().async {
+//
+//            let objects = localRealm.objects(Fourto.self).sorted(byKeyPath: "date", ascending: true)
+//
+//            let fourtos: [Fourto] = objects.map { object in
+//                self.buildFourto(fourto: object)
+//            }
+//
+//            DispatchQueue.main.async {
+//                fourtoList = fourtos
+//            }
+//        }
+//    }
+//
+//    private func buildFourto(fourto: Fourto) -> Fourto {
+//        guard let id = UUID(uuidString: fourto.id) else {
+//            fatalError("Corrupted ID: \(fourto.id)")
+//        }
+//
+//        let fourto = Fourto(takenDate: fourto.takenDate,
+//                            imagePath: fourto.imagePath ?? "")
+//
+//        return fourto
+//    }
+    
+    
 }
 
-struct AlbumCollectionView_Previews: PreviewProvider {
-    static var previews: some View {
-        AlbumCollectionView()
-    }
-}
+//struct AlbumCollectionView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AlbumCollectionView()
+//    }
+//}
