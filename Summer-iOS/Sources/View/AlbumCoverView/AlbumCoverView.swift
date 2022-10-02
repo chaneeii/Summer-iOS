@@ -19,7 +19,25 @@ struct AlbumCoverView: View {
         ZStack(alignment: .bottom) {
             // ContentView
             VStack(){
-                HStack{}.frame(width: 50, height: 50)
+                HStack{
+                    Spacer()
+                    // Button
+                    ZStack{
+                        NavigationLink(destination: SettingsView(), tag: 2, selection: self.$tag ) {
+                            EmptyView()
+                        }
+                        Button {
+                            self.tag = 2
+                        } label: {
+                            Image(systemName: "slider.horizontal.3")
+                                .font(.system(size: 25))
+                                .foregroundColor(.pointPink)
+                                .frame(width: 50, height: 50)
+                                .padding(.trailing, 20)
+                        }
+                    }
+                }.frame(maxWidth: .infinity)
+                
                 VStack(){
                     Text(UserDefaultsManager.getUserDefaultsObject(forKey: .albumName) as? String ?? "(no name)")
                         .foregroundColor(.white)

@@ -33,21 +33,33 @@ struct AlbumCollectionView: View {
                     }
                     Spacer()
                     
-                    // Button
-                    ZStack{
-                        NavigationLink(destination: SettingsView(), tag: 2, selection: self.$tag ) {
-                            EmptyView()
-                        }
+                    if !fourtoList.isEmpty {
                         Button {
-                            self.tag = 2
+                            self.tag = 3
                         } label: {
-                            Image(systemName: "slider.horizontal.3")
+                            Image(systemName: "heart.square.fill")
                                 .font(.system(size: 25))
                                 .foregroundColor(.pointPink)
                                 .frame(width: 50, height: 50)
                                 .padding(.trailing, 20)
                         }
                     }
+
+//                    // Button
+//                    ZStack{
+//                        NavigationLink(destination: SettingsView(), tag: 2, selection: self.$tag ) {
+//                            EmptyView()
+//                        }
+//                        Button {
+//                            self.tag = 2
+//                        } label: {
+//                            Image(systemName: "slider.horizontal.3")
+//                                .font(.system(size: 25))
+//                                .foregroundColor(.pointPink)
+//                                .frame(width: 50, height: 50)
+//                                .padding(.trailing, 20)
+//                        }
+//                    }
                 }
                 .frame(maxWidth: .infinity)
                 
@@ -75,15 +87,24 @@ struct AlbumCollectionView: View {
                     ScrollView(showsIndicators: false){
                         LazyVGrid(columns: flexibleLayout, spacing: 20) {
                             ForEach(fourtoList, id: \.id) { fourto in
-                                 HStack{
-                                     getImage(for: fourto)
-                                         .resizable()
-                                         .frame(width: 149.83, height: 227.16)
-                                         .scaledToFill()
-                                 }
-                                 .frame(width: 149.83, height: 227.16)
-                                 .background(Color.white50)
-                                     
+                                ZStack{
+                                    NavigationLink(destination: PhotoDetailView(fourto: fourto) , tag: 3, selection: self.$tag ) {
+                                        EmptyView()
+                                    }
+                                    Button(action: {
+                                        self.tag = 3
+                                    }) {
+                                        HStack{
+                                            getImage(for: fourto)
+                                                .resizable()
+                                                .frame(width: 149.83, height: 227.16)
+                                                .aspectRatio(contentMode: .fill)
+                                                .clipShape(RoundedRectangle(cornerRadius: 0, style: .continuous))
+                                        }
+                                        .frame(width: 149.83, height: 227.16)
+                                        .background(Color.white50)
+                                    }
+                                }
                              }
                         }
                     }

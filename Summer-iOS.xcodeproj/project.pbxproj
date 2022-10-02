@@ -27,6 +27,9 @@
 		A759DBD828E89FA20021B13A /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBD728E89FA20021B13A /* ImageUtils.swift */; };
 		A759DBE028E9BDDC0021B13A /* FourtosProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBDF28E9BDDC0021B13A /* FourtosProtocol.swift */; };
 		A759DBE528E9D0E90021B13A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBE428E9D0E90021B13A /* SettingsView.swift */; };
+		A759DBE828E9DA900021B13A /* AlbumCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBE728E9DA900021B13A /* AlbumCarouselView.swift */; };
+		A759DBEA28E9DC470021B13A /* CustomCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBE928E9DC470021B13A /* CustomCarousel.swift */; };
+		A76C65B428E9EB5F00F53329 /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76C65B328E9EB5F00F53329 /* PhotoDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,9 @@
 		A759DBD728E89FA20021B13A /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
 		A759DBDF28E9BDDC0021B13A /* FourtosProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourtosProtocol.swift; sourceTree = "<group>"; };
 		A759DBE428E9D0E90021B13A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A759DBE728E9DA900021B13A /* AlbumCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCarouselView.swift; sourceTree = "<group>"; };
+		A759DBE928E9DC470021B13A /* CustomCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCarousel.swift; sourceTree = "<group>"; };
+		A76C65B328E9EB5F00F53329 /* PhotoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,23 +127,17 @@
 		A759DBAA28E85E8F0021B13A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A76C65B228E9EB4E00F53329 /* PhotoDetailView */,
+				A759DBE628E9DA830021B13A /* AlbumCarouselView */,
 				A759DBE128E9D0D90021B13A /* Settings */,
 				A759DBC628E88CD00021B13A /* AddPhotoView */,
 				A759DBC328E868010021B13A /* AlbumCollectionView */,
 				A759DBC228E867F80021B13A /* AlbumCoverView */,
-				A759DBAB28E85E8F0021B13A /* InitialAlbumSetup */,
 				A759DBAC28E85E8F0021B13A /* EditAlbumName */,
 				A759DBAE28E85E8F0021B13A /* EditAlbumCover */,
 				A759DBB028E85E8F0021B13A /* Common */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		A759DBAB28E85E8F0021B13A /* InitialAlbumSetup */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = InitialAlbumSetup;
 			sourceTree = "<group>";
 		};
 		A759DBAC28E85E8F0021B13A /* EditAlbumName */ = {
@@ -249,6 +249,23 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		A759DBE628E9DA830021B13A /* AlbumCarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				A759DBE728E9DA900021B13A /* AlbumCarouselView.swift */,
+				A759DBE928E9DC470021B13A /* CustomCarousel.swift */,
+			);
+			path = AlbumCarouselView;
+			sourceTree = "<group>";
+		};
+		A76C65B228E9EB4E00F53329 /* PhotoDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				A76C65B328E9EB5F00F53329 /* PhotoDetailView.swift */,
+			);
+			path = PhotoDetailView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -335,10 +352,13 @@
 				A759DBBF28E85E8F0021B13A /* ColorExtension+.swift in Sources */,
 				A759DBBC28E85E8F0021B13A /* CustomImageButton.swift in Sources */,
 				A759DBC828E88CDC0021B13A /* AddPhotoView.swift in Sources */,
+				A76C65B428E9EB5F00F53329 /* PhotoDetailView.swift in Sources */,
 				A759DBE528E9D0E90021B13A /* SettingsView.swift in Sources */,
 				A759DBC528E868110021B13A /* AlbumCollectionView.swift in Sources */,
 				A759DBD128E895720021B13A /* Fourto.swift in Sources */,
 				A71FA7AB28E85D8800DE27A3 /* Summer_iOSApp.swift in Sources */,
+				A759DBE828E9DA900021B13A /* AlbumCarouselView.swift in Sources */,
+				A759DBEA28E9DC470021B13A /* CustomCarousel.swift in Sources */,
 				A759DBD528E8961B0021B13A /* Fourtos.swift in Sources */,
 				A759DBE028E9BDDC0021B13A /* FourtosProtocol.swift in Sources */,
 				A759DBD828E89FA20021B13A /* ImageUtils.swift in Sources */,
