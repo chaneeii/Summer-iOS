@@ -40,7 +40,7 @@ struct AlbumCarouselView: View {
                     
                     CustomCarousel(index: $currentIndex,
                                    items: fourtoList,
-                                   cardPadding: 33,
+                                   cardPadding: 120,
                                    id: \.id) { fourto, cardSize in
                         // MARK: YOUR CUSTOM CELL VIEW
                         VStack{
@@ -48,22 +48,18 @@ struct AlbumCarouselView: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 300, height: 454.84)
-                                .clipShape(RoundedRectangle(cornerRadius: 0, style: .continuous))
-                            
+                                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                             Text(fourto.takenDate.getDateToString(format: "YYYY/MM/dd"))
                                 .foregroundColor(Color.gray77)
                                 .font(.system(size: 16))
                                 .padding(.top, 20)
                         }
-                        
+                        .frame(width: cardSize.width, height: cardSize.height)
+
                     }
-                    .padding(.horizontal,-15)
                     .padding(.top, -10)
-                     
                     Spacer()
-                    
                 }
-                
             }
             
             // Button

@@ -13,6 +13,7 @@ struct AlbumCollectionView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @ObservedResults(Fourto.self) var fourtoList
     @State var tag: Int? = nil
+    @State var isActivated = false
     
     private var flexibleLayout = [GridItem(.flexible()), GridItem(.flexible())]
     
@@ -34,32 +35,24 @@ struct AlbumCollectionView: View {
                     Spacer()
                     
                     if !fourtoList.isEmpty {
-                        Button {
-                            self.tag = 3
-                        } label: {
-                            Image(systemName: "heart.square.fill")
-                                .font(.system(size: 25))
-                                .foregroundColor(.pointPink)
-                                .frame(width: 50, height: 50)
-                                .padding(.trailing, 20)
+                        
+                        // Button
+                        ZStack{
+                            NavigationLink(destination: AlbumCarouselView(), tag: -2, selection: self.$tag ) {
+                                EmptyView()
+                            }
+                            Button {
+                                self.tag = -2
+                            } label: {
+                                Image(systemName: "heart.square.fill")
+                                    .font(.system(size: 25))
+                                    .foregroundColor(.pointPink)
+                                    .frame(width: 50, height: 50)
+                                    .padding(.trailing, 20)
+                            }
                         }
                     }
 
-//                    // Button
-//                    ZStack{
-//                        NavigationLink(destination: SettingsView(), tag: 2, selection: self.$tag ) {
-//                            EmptyView()
-//                        }
-//                        Button {
-//                            self.tag = 2
-//                        } label: {
-//                            Image(systemName: "slider.horizontal.3")
-//                                .font(.system(size: 25))
-//                                .foregroundColor(.pointPink)
-//                                .frame(width: 50, height: 50)
-//                                .padding(.trailing, 20)
-//                        }
-//                    }
                 }
                 .frame(maxWidth: .infinity)
                 
@@ -86,13 +79,19 @@ struct AlbumCollectionView: View {
                     
                     ScrollView(showsIndicators: false){
                         LazyVGrid(columns: flexibleLayout, spacing: 20) {
-                            ForEach(fourtoList, id: \.id) { fourto in
+                            
+                            
+                            ForEach(Array(zip(0..<fourtoList.count, fourtoList)), id: \.0) { index , fourto in
                                 ZStack{
-                                    NavigationLink(destination: PhotoDetailView(fourto: fourto) , tag: 3, selection: self.$tag ) {
+                                    NavigationLink(destination: Text("Second View")) {
+                                        Image("원하는 사진")
+                                    }
+                                    
+                                    NavigationLink(destination: PhotoDetailView(fourto: fourto) , tag: index, selection: self.$tag ) {
                                         EmptyView()
                                     }
                                     Button(action: {
-                                        self.tag = 3
+                                        self.tag = index
                                     }) {
                                         HStack{
                                             getImage(for: fourto)
@@ -104,6 +103,7 @@ struct AlbumCollectionView: View {
                                         .frame(width: 149.83, height: 227.16)
                                         .background(Color.white50)
                                     }
+                                    
                                 }
                              }
                         }
@@ -118,14 +118,14 @@ struct AlbumCollectionView: View {
             
             // Button
             ZStack{
-                NavigationLink(destination: AddPhotoView(), tag: 1, selection: self.$tag ) {
+                NavigationLink(destination: AddPhotoView(), tag: -1, selection: self.$tag ) {
                     EmptyView()
                 }
                 CustomImageButton(isDisabled: false,
                                   imageName: "heart-fill",
                                   width: 90,
                                   height: 90){
-                    self.tag = 1
+                    self.tag = -1
                 }
             }
             
