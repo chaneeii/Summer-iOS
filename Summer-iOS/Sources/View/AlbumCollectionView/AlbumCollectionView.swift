@@ -32,14 +32,21 @@ struct AlbumCollectionView: View {
                             .padding(.leading, 20)
                     }
                     Spacer()
-                    Button {
-                        self.presentationMode.wrappedValue.dismiss()
-                    } label: {
-                        Image(systemName: "slider.horizontal.3")
-                            .font(.system(size: 25))
-                            .foregroundColor(.pointPink)
-                            .frame(width: 50, height: 50)
-                            .padding(.trailing, 20)
+                    
+                    // Button
+                    ZStack{
+                        NavigationLink(destination: SettingsView(), tag: 2, selection: self.$tag ) {
+                            EmptyView()
+                        }
+                        Button {
+                            self.tag = 2
+                        } label: {
+                            Image(systemName: "slider.horizontal.3")
+                                .font(.system(size: 25))
+                                .foregroundColor(.pointPink)
+                                .frame(width: 50, height: 50)
+                                .padding(.trailing, 20)
+                        }
                     }
                 }
                 .frame(maxWidth: .infinity)
@@ -116,33 +123,6 @@ struct AlbumCollectionView: View {
 
         return Image(systemName: "person.crop.square")
     }
-    
-//    private func loadSavedData() {
-//        DispatchQueue.global().async {
-//
-//            let objects = localRealm.objects(Fourto.self).sorted(byKeyPath: "date", ascending: true)
-//
-//            let fourtos: [Fourto] = objects.map { object in
-//                self.buildFourto(fourto: object)
-//            }
-//
-//            DispatchQueue.main.async {
-//                fourtoList = fourtos
-//            }
-//        }
-//    }
-//
-//    private func buildFourto(fourto: Fourto) -> Fourto {
-//        guard let id = UUID(uuidString: fourto.id) else {
-//            fatalError("Corrupted ID: \(fourto.id)")
-//        }
-//
-//        let fourto = Fourto(takenDate: fourto.takenDate,
-//                            imagePath: fourto.imagePath ?? "")
-//
-//        return fourto
-//    }
-    
     
 }
 

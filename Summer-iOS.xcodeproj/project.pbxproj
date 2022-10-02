@@ -26,6 +26,7 @@
 		A759DBD528E8961B0021B13A /* Fourtos.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBD428E8961B0021B13A /* Fourtos.swift */; };
 		A759DBD828E89FA20021B13A /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBD728E89FA20021B13A /* ImageUtils.swift */; };
 		A759DBE028E9BDDC0021B13A /* FourtosProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBDF28E9BDDC0021B13A /* FourtosProtocol.swift */; };
+		A759DBE528E9D0E90021B13A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBE428E9D0E90021B13A /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		A759DBD428E8961B0021B13A /* Fourtos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fourtos.swift; sourceTree = "<group>"; };
 		A759DBD728E89FA20021B13A /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
 		A759DBDF28E9BDDC0021B13A /* FourtosProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourtosProtocol.swift; sourceTree = "<group>"; };
+		A759DBE428E9D0E90021B13A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		A759DBAA28E85E8F0021B13A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A759DBE128E9D0D90021B13A /* Settings */,
 				A759DBC628E88CD00021B13A /* AddPhotoView */,
 				A759DBC328E868010021B13A /* AlbumCollectionView */,
 				A759DBC228E867F80021B13A /* AlbumCoverView */,
@@ -238,6 +241,14 @@
 			path = Realm;
 			sourceTree = "<group>";
 		};
+		A759DBE128E9D0D90021B13A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A759DBE428E9D0E90021B13A /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -324,6 +335,7 @@
 				A759DBBF28E85E8F0021B13A /* ColorExtension+.swift in Sources */,
 				A759DBBC28E85E8F0021B13A /* CustomImageButton.swift in Sources */,
 				A759DBC828E88CDC0021B13A /* AddPhotoView.swift in Sources */,
+				A759DBE528E9D0E90021B13A /* SettingsView.swift in Sources */,
 				A759DBC528E868110021B13A /* AlbumCollectionView.swift in Sources */,
 				A759DBD128E895720021B13A /* Fourto.swift in Sources */,
 				A71FA7AB28E85D8800DE27A3 /* Summer_iOSApp.swift in Sources */,
