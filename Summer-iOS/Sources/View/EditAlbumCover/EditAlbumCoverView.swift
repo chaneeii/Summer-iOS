@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EditAlbumCoverView: View {
     
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @Environment(\.dismiss) private var dismiss
     @Binding var isFirstLaunching: Bool
     @Binding var albumName: String
     
@@ -28,7 +28,7 @@ struct EditAlbumCoverView: View {
             VStack(alignment: .leading){
                 
                 Button {
-                    self.presentationMode.wrappedValue.dismiss()
+                    dismiss()
                 } label: {
                     Image(systemName: "chevron.left")
                         .font(.system(size: 25))
@@ -88,7 +88,7 @@ struct EditAlbumCoverView: View {
                     isFirstLaunching.toggle()
                 } else {
                     UserDefaultsManager.setUserDefaultsWithIamge(UIImage: uiImage, forKey: .albumCoverImage)
-                    self.presentationMode.wrappedValue.dismiss()
+                    dismiss()
                 }
             }
         }

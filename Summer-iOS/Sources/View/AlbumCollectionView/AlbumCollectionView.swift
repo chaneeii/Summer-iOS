@@ -10,7 +10,7 @@ import RealmSwift
 
 struct AlbumCollectionView: View {
     
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @Environment(\.dismiss) private var dismiss
     @ObservedResults(Fourto.self) var fourtoList
     @State var tag: Int? = nil
     @State var isActivated = false
@@ -24,7 +24,7 @@ struct AlbumCollectionView: View {
                 
                 HStack{
                     Button {
-                        self.presentationMode.wrappedValue.dismiss()
+                        dismiss()
                     } label: {
                         Image(systemName: "chevron.left")
                             .font(.system(size: 25))

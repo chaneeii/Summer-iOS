@@ -10,7 +10,7 @@ import RealmSwift
 
 struct AddPhotoView: View {
     
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @Environment(\.dismiss) private var dismiss
     @ObservedResults(Fourto.self) var fourtoList
     @State var tag: Int? = nil
     @State var date: Date = Date()
@@ -29,7 +29,7 @@ struct AddPhotoView: View {
             VStack(alignment: .leading){
                 HStack{
                     Button {
-                        self.presentationMode.wrappedValue.dismiss()
+                        dismiss()
                     } label: {
                         Image(systemName: "chevron.left")
                             .font(.system(size: 25))
@@ -96,7 +96,7 @@ struct AddPhotoView: View {
                               height: 90){
                 
                 self.addFourto()
-                self.presentationMode.wrappedValue.dismiss()
+                dismiss()
             }
             
         }

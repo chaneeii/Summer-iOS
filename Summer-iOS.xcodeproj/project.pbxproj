@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CF69578290126290062812C /* UINavigationControllerExtension+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF69577290126290062812C /* UINavigationControllerExtension+.swift */; };
 		A71FA7AB28E85D8800DE27A3 /* Summer_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71FA7AA28E85D8800DE27A3 /* Summer_iOSApp.swift */; };
 		A71FA7AF28E85D8900DE27A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A71FA7AE28E85D8900DE27A3 /* Assets.xcassets */; };
 		A71FA7B228E85D8900DE27A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A71FA7B128E85D8900DE27A3 /* Preview Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2CF69577290126290062812C /* UINavigationControllerExtension+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationControllerExtension+.swift"; sourceTree = "<group>"; };
 		A71FA7A728E85D8800DE27A3 /* Summer-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Summer-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A71FA7AA28E85D8800DE27A3 /* Summer_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summer_iOSApp.swift; sourceTree = "<group>"; };
 		A71FA7AE28E85D8900DE27A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				A759DBB628E85E8F0021B13A /* ColorExtension+.swift */,
+				2CF69577290126290062812C /* UINavigationControllerExtension+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				A759DBD128E895720021B13A /* Fourto.swift in Sources */,
 				A71FA7AB28E85D8800DE27A3 /* Summer_iOSApp.swift in Sources */,
 				A759DBE828E9DA900021B13A /* AlbumCarouselView.swift in Sources */,
+				2CF69578290126290062812C /* UINavigationControllerExtension+.swift in Sources */,
 				A759DBEA28E9DC470021B13A /* CustomCarousel.swift in Sources */,
 				A759DBD528E8961B0021B13A /* Fourtos.swift in Sources */,
 				A759DBE028E9BDDC0021B13A /* FourtosProtocol.swift in Sources */,

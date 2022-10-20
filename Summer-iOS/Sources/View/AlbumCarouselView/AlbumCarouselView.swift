@@ -10,7 +10,7 @@ import RealmSwift
 
 struct AlbumCarouselView: View {
     
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @Environment(\.dismiss) private var dismiss
     @ObservedResults(Fourto.self) var fourtoList
     @State var tag: Int? = nil
     @State var currentIndex: Int = 0 
@@ -25,7 +25,7 @@ struct AlbumCarouselView: View {
                     // Button
                     
                     Button {
-                        self.presentationMode.wrappedValue.dismiss()
+                        dismiss()
                     } label: {
                         Image(systemName: "square.grid.2x2.fill")
                             .font(.system(size: 25))

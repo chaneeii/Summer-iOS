@@ -10,7 +10,7 @@ import SwiftUI
 
 struct EditAlbumNameView: View {
     
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @Environment(\.dismiss) private var dismiss
     @Binding var isFirstLaunching: Bool
     @State var albumName: String = ""
     @State var tag: Int? = nil
@@ -26,7 +26,7 @@ struct EditAlbumNameView: View {
                         HStack{}.frame(width: 50, height: 50)
                     } else {
                         Button {
-                            self.presentationMode.wrappedValue.dismiss()
+                            dismiss()
                         } label: {
                             Image(systemName: "chevron.left")
                                 .font(.system(size: 25))
@@ -84,7 +84,7 @@ struct EditAlbumNameView: View {
                         self.tag = 1
                     } else {
                         UserDefaultsManager.setUserDefaults(albumName, forKey: .albumName)
-                        self.presentationMode.wrappedValue.dismiss()
+                        dismiss()
                     }
                 }
             }
