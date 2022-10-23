@@ -9,7 +9,7 @@
 
 |App Store | 
 |:---:|
-| <a href="https://apps.apple.com/kr/app/%EB%8F%88-%EC%9B%8C%EB%A6%AC/id1643097323" style="display: inline-block; overflow: hidden; border-top-left-radius: 13px; border-top-right-radius: 13px; border-bottom-right-radius: 13px; border-bottom-left-radius: 13px; width: 100px; height: 35px;"> <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-US?size=250x83&amp;releaseDate=1601596800&h=cf93971b907cb46ebd5dc8f2d957a6ef" alt="Download on the App Store" style="border-top-left-radius: 13px; border-top-right-radius: 13px; border-bottom-right-radius: 13px; border-bottom-left-radius: 13px; width: 100px; height: 35px;"></a>|
+| <a href="https://apps.apple.com/kr/app/%EB%8F%88-%EC%9B%8C%EB%A6%AC/id1643097323" style="display: inline-block; overflow: hidden; border-top-left-radius: 13px; border-top-right-radius: 13px; border-bottom-right-radius: 13px; border-bottom-left-radius: 13px; width: 100px; height: 35px;"> <img src="https://apps.apple.com/kr/app/%EC%8D%B8%EB%A8%B8-%EB%84%A4%EC%BB%B7%EC%95%A8%EB%B2%94/id6443647536" alt="Download on the App Store" style="border-top-left-radius: 13px; border-top-right-radius: 13px; border-bottom-right-radius: 13px; border-bottom-left-radius: 13px; width: 100px; height: 35px;"></a>|
 
 </div>
 
