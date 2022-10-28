@@ -15,7 +15,7 @@ enum ImageSourceType {
 }
 
 struct ImagePicker {
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.dismiss) private var dismiss
     @Binding var image: UIImage?
 
     var sourceType: ImageSourceType = .library
@@ -73,7 +73,7 @@ extension ImagePicker: UIViewControllerRepresentable {
                 parent.image = fixImageOrientation(for: uiImage)
             }
 
-            parent.presentationMode.wrappedValue.dismiss()
+            parent.dismiss()
         }
 
         // UIImage does not handle orientation in a way that is suitable

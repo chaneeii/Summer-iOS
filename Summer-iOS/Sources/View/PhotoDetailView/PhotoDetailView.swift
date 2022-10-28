@@ -10,7 +10,7 @@ import RealmSwift
 
 struct PhotoDetailView: View {
     
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @Environment(\.dismiss) private var dismiss
     @State private var showingAlert = false
     @State var fourto: Fourto
     @ObservedResults(Fourto.self) var fourtoList
@@ -23,7 +23,7 @@ struct PhotoDetailView: View {
                 
                 HStack{
                     Button {
-                        self.presentationMode.wrappedValue.dismiss()
+                        dismiss()
                     } label: {
                         Image(systemName: "chevron.left")
                             .font(.system(size: 25))
@@ -70,11 +70,11 @@ struct PhotoDetailView: View {
             let firstButton = Alert.Button.destructive(Text("삭제")) {
                 // 삭제
                 $fourtoList.remove(fourto)
-                self.presentationMode.wrappedValue.dismiss()
+                dismiss()
 
             }
             let secondButton = Alert.Button.cancel(Text("취소")) {
-                self.presentationMode.wrappedValue.dismiss()
+                dismiss()
             }
             return Alert(title: Text("사진 삭제"),
                          message: Text("이 사진을 삭제할까요?"),
