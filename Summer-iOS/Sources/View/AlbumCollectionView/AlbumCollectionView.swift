@@ -96,8 +96,8 @@ struct AlbumCollectionView: View {
                                         HStack{
                                             getImage(for: fourto)
                                                 .resizable()
-                                                .frame(width: 149.83, height: 227.16)
                                                 .aspectRatio(contentMode: .fill)
+                                                .frame(width: 149.83, height: 227.16)
                                                 .clipShape(RoundedRectangle(cornerRadius: 0, style: .continuous))
                                         }
                                         .frame(width: 149.83, height: 227.16)
