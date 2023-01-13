@@ -112,7 +112,7 @@ struct AddPhotoView: View {
     }
     
     func addFourto() {
-        var fourto = Fourto(takenDate: Date(), imagePath: "")
+        let fourto = Fourto(takenDate: Date(), imagePath: "")
         if let uiImage = uiImage {
             if let jpegData = uiImage.jpegData(compressionQuality: 0.4) {
                 fourto.setImage(image: jpegData)
