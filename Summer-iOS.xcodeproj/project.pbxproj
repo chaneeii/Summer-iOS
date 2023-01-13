@@ -11,6 +11,8 @@
 		A71FA7AB28E85D8800DE27A3 /* Summer_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71FA7AA28E85D8800DE27A3 /* Summer_iOSApp.swift */; };
 		A71FA7AF28E85D8900DE27A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A71FA7AE28E85D8900DE27A3 /* Assets.xcassets */; };
 		A71FA7B228E85D8900DE27A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A71FA7B128E85D8900DE27A3 /* Preview Assets.xcassets */; };
+		A74C750D2970D6040046B1B1 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = A74C750C2970D6040046B1B1 /* Realm */; };
+		A74C750F2970D6040046B1B1 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A74C750E2970D6040046B1B1 /* RealmSwift */; };
 		A759DBB928E85E8F0021B13A /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBA928E85E8F0021B13A /* UserDefaultsManager.swift */; };
 		A759DBBA28E85E8F0021B13A /* EditAlbumNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBAD28E85E8F0021B13A /* EditAlbumNameView.swift */; };
 		A759DBBB28E85E8F0021B13A /* EditAlbumCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBAF28E85E8F0021B13A /* EditAlbumCoverView.swift */; };
@@ -21,8 +23,6 @@
 		A759DBC028E85E8F0021B13A /* KeybaordHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBB728E85E8F0021B13A /* KeybaordHelper.swift */; };
 		A759DBC528E868110021B13A /* AlbumCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBC428E868110021B13A /* AlbumCollectionView.swift */; };
 		A759DBC828E88CDC0021B13A /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBC728E88CDC0021B13A /* AddPhotoView.swift */; };
-		A759DBCC28E895220021B13A /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = A759DBCB28E895220021B13A /* Realm */; };
-		A759DBCE28E895220021B13A /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A759DBCD28E895220021B13A /* RealmSwift */; };
 		A759DBD128E895720021B13A /* Fourto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBD028E895720021B13A /* Fourto.swift */; };
 		A759DBD528E8961B0021B13A /* Fourtos.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBD428E8961B0021B13A /* Fourtos.swift */; };
 		A759DBD828E89FA20021B13A /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759DBD728E89FA20021B13A /* ImageUtils.swift */; };
@@ -64,8 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A759DBCE28E895220021B13A /* RealmSwift in Frameworks */,
-				A759DBCC28E895220021B13A /* Realm in Frameworks */,
+				A74C750F2970D6040046B1B1 /* RealmSwift in Frameworks */,
+				A74C750D2970D6040046B1B1 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,8 +286,8 @@
 			);
 			name = "Summer-iOS";
 			packageProductDependencies = (
-				A759DBCB28E895220021B13A /* Realm */,
-				A759DBCD28E895220021B13A /* RealmSwift */,
+				A74C750C2970D6040046B1B1 /* Realm */,
+				A74C750E2970D6040046B1B1 /* RealmSwift */,
 			);
 			productName = "Summer-iOS";
 			productReference = A71FA7A728E85D8800DE27A3 /* Summer-iOS.app */;
@@ -318,7 +318,7 @@
 			);
 			mainGroup = A71FA79E28E85D8800DE27A3;
 			packageReferences = (
-				A759DBCA28E895220021B13A /* XCRemoteSwiftPackageReference "realm-swift" */,
+				A74C750B2970D6040046B1B1 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = A71FA7A828E85D8800DE27A3 /* Products */;
 			projectDirPath = "";
@@ -580,7 +580,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A759DBCA28E895220021B13A /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+		A74C750B2970D6040046B1B1 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
 			requirement = {
@@ -591,14 +591,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A759DBCB28E895220021B13A /* Realm */ = {
+		A74C750C2970D6040046B1B1 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A759DBCA28E895220021B13A /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = A74C750B2970D6040046B1B1 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = Realm;
 		};
-		A759DBCD28E895220021B13A /* RealmSwift */ = {
+		A74C750E2970D6040046B1B1 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A759DBCA28E895220021B13A /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = A74C750B2970D6040046B1B1 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
